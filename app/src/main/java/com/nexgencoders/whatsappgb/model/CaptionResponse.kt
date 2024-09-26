@@ -1,0 +1,33 @@
+package com.nexgencoders.whatsappgb.model
+
+data class CaptionResponse(
+    val Love: List<CaptionData>,
+    val Laugh: List<CaptionData>,
+    val Motivation: List<CaptionData>,
+    val Flirty: List<CaptionData>,
+    val Heartbroken: List<CaptionData>,
+    val Sad: List<CaptionData>,
+    val Pain: List<CaptionData>,
+    val Cry: List<CaptionData>,
+    val Religious: List<CaptionData>,
+    val Friendship: List<CaptionData>,
+    val Success: List<CaptionData>,
+    val Happiness: List<CaptionData>,
+    val Life: List<CaptionData>,
+    val Loneliness: List<CaptionData>,
+    val Positivity: List<CaptionData>,
+    val Self_love: List<CaptionData>,
+    val Inspiration: List<CaptionData>,
+    val Forgiveness: List<CaptionData>,
+    val Gratitude: List<CaptionData>,
+    val Growth: List<CaptionData>,
+    val Determination: List<CaptionData>,
+    val Dreams: List<CaptionData>,
+    val Family: List<CaptionData>,
+    val Hope: List<CaptionData>,
+    val Regret: List<CaptionData>,
+    val Moving_On: List<CaptionData>,
+    val Faith: List<CaptionData>,
+    val Trust: List<CaptionData>,
+
+    )

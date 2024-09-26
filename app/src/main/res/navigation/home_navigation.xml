@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.nexgencoders.whatsappgb.ui.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_captionFragment"
+            app:destination="@id/captionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_directChatFragment"
+            app:destination="@id/directChatFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_replyMessageFragment"
+            app:destination="@id/replyMessageFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_whatsappWebFragment"
+            app:destination="@id/whatsappWebFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_qrCodeFragment"
+            app:destination="@id/qrCodeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchMessageFragment"
+            app:destination="@id/searchMessageFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chattingFragment"
+            app:destination="@id/chattingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_statusFragment"
+            app:destination="@id/statusFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chatListFragment"
+            app:destination="@id/chatListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/captionFragment"
+        android:name="com.nexgencoders.whatsappgb.ui.fragment.CaptionFragment"
+        android:label="fragment_caption"
+        tools:layout="@layout/fragment_caption">
+        <action
+            android:id="@+id/action_captionFragment_to_captionDetailFragment"
+            app:destination="@id/captionDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/directChatFragment"
+        android:name="com.nexgencoders.whatsappgb.ui.fragment.DirectChatFragment"
+        android:label="fragment_direct_chat"
+        tools:layout="@layout/fragment_direct_chat" />
+    <fragment
+        android:id="@+id/replyMessageFragment"
+        android:name="com.nexgencoders.whatsappgb.ui.fragment.ReplyMessageFragment"
+        android:label="fragment_reply_message"
+        tools:layout="@layout/fragment_reply_message" />
+    <fragment
+        android:id="@+id/whatsappWebFragment"
+        android:name="com.nexgencoders.whatsappgb.ui.fragment.WhatsappWebFragment"
+        android:label="fragment_whatsapp_web"
+        tools:layout="@layout/fragment_whatsapp_web"/>
+    <fragment
+        android:id="@+id/chattingFragment"
+        android:name="com.nexgencoders.whatsappgb.ui.fragment.ChattingFragment"
+        android:label="fragment_chatting"
+        tools:layout="@layout/fragment_chatting" />
+    <fragment
+        android:id="@+id/qrCodeFragment"
+        android:name="com.nexgencoders.whatsappgb.ui.fragment.QrCodeFragment"
+        android:label="fragment_qr_code"
+        tools:layout="@layout/fragment_qr_code">
+        <action
+            android:id="@+id/action_qrCodeFragment_to_scannerFragment"
+            app:destination="@id/scannerFragment" />
+        <action
+            android:id="@+id/action_qrCodeFragment_to_qrResultFragment"
+            app:destination="@id/qrResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchMessageFragment"
+        android:name="com.nexgencoders.whatsappgb.ui.fragment.SearchMessageFragment"
+        android:label="fragment_search_message"
+        tools:layout="@layout/fragment_search_message" />
+    <fragment
+        android:id="@+id/captionDetailFragment"
+        android:name="com.nexgencoders.whatsappgb.ui.fragment.CaptionDetailFragment"
+        android:label="fragment_caption_detail"
+        tools:layout="@layout/fragment_caption_detail">
+        <argument
+            android:name="category"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/statusFragment"
+        android:name="com.nexgencoders.whatsappgb.ui.fragment.StatusFragment"
+        android:label="fragment_status"
+        tools:layout="@layout/fragment_status" />
+    <fragment
+        android:id="@+id/scannerFragment"
+        android:name="com.nexgencoders.whatsappgb.ui.fragment.ScannerFragment"
+        android:label="fragment_scanner"
+        tools:layout="@layout/fragment_scanner">
+        <action
+            android:id="@+id/action_scannerFragment_to_qrResultFragment"
+            app:destination="@id/qrResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/qrResultFragment"
+        android:name="com.nexgencoders.whatsappgb.ui.fragment.QrResultFragment"
+        android:label="fragment_qr_result"
+        tools:layout="@layout/fragment_qr_result">
+        <argument
+            android:name="result"
+            app:argType="string" />
+        <argument
+            android:name="isNew"
+            app:argType="boolean"
+            android:defaultValue="false" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/chatDetailFragment"
+        android:name="com.nexgencoders.whatsappgb.ui.fragment.chat.detail.ChatDetailFragment"
+        android:label="Chat Detail"
+        tools:layout="@layout/fragment_chat_detail" />
+    <fragment
+        android:id="@+id/chatListFragment"
+        android:name="com.nexgencoders.whatsappgb.ui.fragment.chat.list.ChatListFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_chat_list" >
+        <action
+            android:id="@+id/action_chatListFragment_to_chatDetailFragment"
+            app:destination="@id/chatDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.nexgencoders.whatsappgb.ui.fragment.ImageFragment"
+        android:label="fragment_image"
+        tools:layout="@layout/fragment_image" />
+
+</navigation>
